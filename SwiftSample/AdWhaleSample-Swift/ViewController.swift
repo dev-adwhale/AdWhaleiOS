@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             
             // BannerView Setting
             self.bannerView.setAdSize(.banner)
-            self.bannerView.setAdUnitID("ca-app-pub-8713069554470817/3524188366")
+            self.bannerView.setAdUnitID("ca-app-pub-3940256099942544/2934735716")
             self.bannerView.setRootViewController(self)
             self.bannerView.setDelegate(self)
         })
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     @IBAction func interstitialAdRequest(_ sender: UIButton) {
         let interstitial = AdWhaleInterstitialAd()
         interstitial.interstitialDelegate = self
-        interstitial.load("ca-app-pub-8713069554470817/9183747144")
+        interstitial.load("ca-app-pub-3940256099942544/4411468910")
     }
     
     @IBAction func interstitialAdShow(_ sender: UIButton) {
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     @IBAction func rewardAdRequest(_ sender: UIButton) {
         let reward = AdWhaleRewardAd()
         reward.rewardDelegate = self
-        reward.load("ca-app-pub-8713069554470817/3959340629")
+        reward.load("ca-app-pub-3940256099942544/1712485313")
     }
     
     @IBAction func rewardAdShow(_ sender: UIButton) {
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     
     // MARK: AppOpen Ad Request
     @IBAction func appOpenAdRequest(_ sender: UIButton) {
-        AdWhaleAppOpenAd.shared.loadAd("ca-app-pub-8713069554470817/7173349835")
+        AdWhaleAppOpenAd.shared.loadAd("ca-app-pub-3940256099942544/5575463023")
         AdWhaleAppOpenAd.shared.appOpenAdDelegate = self
         AdWhaleAppOpenAd.shared.appOpenAdViewDelegate = self
     }
