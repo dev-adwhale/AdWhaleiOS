@@ -14,8 +14,8 @@
 		736100872BB5A8D60037B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736100862BB5A8D60037B781 /* Assets.xcassets */; };
 		7361008A2BB5A8D60037B781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736100882BB5A8D60037B781 /* LaunchScreen.storyboard */; };
 		736100932BB5ADDB0037B781 /* Pods_AdWhaleSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AEF3B522144CB90F95174A /* Pods_AdWhaleSample_Swift.framework */; };
-		73D134952BB65FFA00A01804 /* AdWhaleSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D134932BB65FF600A01804 /* AdWhaleSDK.xcframework */; };
-		73D134962BB65FFA00A01804 /* AdWhaleSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73D134932BB65FF600A01804 /* AdWhaleSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73A4C5BB2BEBABE7001B70B5 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A4C5BA2BEBABE7001B70B5 /* NativeAdView.xib */; };
+		73A4C5BD2BEBAC05001B70B5 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A4C5BC2BEBAC05001B70B5 /* NativeAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73D134962BB65FFA00A01804 /* AdWhaleSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +41,8 @@
 		736100862BB5A8D60037B781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736100892BB5A8D60037B781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7361008B2BB5A8D60037B781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73D134932BB65FF600A01804 /* AdWhaleSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AdWhaleSDK.xcframework; sourceTree = "<group>"; };
+		73A4C5BA2BEBABE7001B70B5 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		73A4C5BC2BEBAC05001B70B5 /* NativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
 		A85835E47AE5A639FE3C594C /* Pods-AdWhaleSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdWhaleSample-Swift.release.xcconfig"; path = "Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E3AEF3B522144CB90F95174A /* Pods_AdWhaleSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdWhaleSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -53,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				736100932BB5ADDB0037B781 /* Pods_AdWhaleSample_Swift.framework in Frameworks */,
-				73D134952BB65FFA00A01804 /* AdWhaleSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +95,8 @@
 				736100832BB5A8D50037B781 /* Main.storyboard */,
 				736100862BB5A8D60037B781 /* Assets.xcassets */,
 				736100882BB5A8D60037B781 /* LaunchScreen.storyboard */,
+				73A4C5BC2BEBAC05001B70B5 /* NativeAdView.swift */,
+				73A4C5BA2BEBABE7001B70B5 /* NativeAdView.xib */,
 				7361008B2BB5A8D60037B781 /* Info.plist */,
 			);
 			path = "AdWhaleSample-Swift";
@@ -104,7 +105,6 @@
 		92277B813DF607E9E39EAF4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73D134932BB65FF600A01804 /* AdWhaleSDK.xcframework */,
 				E3AEF3B522144CB90F95174A /* Pods_AdWhaleSample_Swift.framework */,
 			);
 			name = Frameworks;
@@ -121,9 +121,9 @@
 				736100762BB5A8D50037B781 /* Sources */,
 				736100772BB5A8D50037B781 /* Frameworks */,
 				736100782BB5A8D50037B781 /* Resources */,
-				36C8F166EF5B17F0A8FFCE11 /* [CP] Embed Pods Frameworks */,
-				B5574D4D8DF5984117BACFD9 /* [CP] Copy Pods Resources */,
 				736100982BB5ADE00037B781 /* Embed Frameworks */,
+				9115C149692BAD7D7AB6B74C /* [CP] Embed Pods Frameworks */,
+				8D5B48ED843ECFE12A9A07BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A4C5BB2BEBABE7001B70B5 /* NativeAdView.xib in Resources */,
 				7361008A2BB5A8D60037B781 /* LaunchScreen.storyboard in Resources */,
 				736100872BB5A8D60037B781 /* Assets.xcassets in Resources */,
 				736100852BB5A8D50037B781 /* Main.storyboard in Resources */,
@@ -181,23 +182,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36C8F166EF5B17F0A8FFCE11 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7FB0C82DAF4000B46CB95A61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +204,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5574D4D8DF5984117BACFD9 /* [CP] Copy Pods Resources */ = {
+		8D5B48ED843ECFE12A9A07BC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +221,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9115C149692BAD7D7AB6B74C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdWhaleSample-Swift/Pods-AdWhaleSample-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -244,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A4C5BD2BEBAC05001B70B5 /* NativeAdView.swift in Sources */,
 				736100822BB5A8D50037B781 /* ViewController.swift in Sources */,
 				7361007E2BB5A8D50037B781 /* AppDelegate.swift in Sources */,
 				736100802BB5A8D50037B781 /* SceneDelegate.swift in Sources */,

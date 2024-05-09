@@ -33,14 +33,6 @@
                                     <action selector="nativeAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l7E-tV-huO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDG-9C-owh">
-                                <rect key="frame" x="137" y="380" width="101" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="App Open"/>
-                                <connections>
-                                    <action selector="appOpenAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ni-9u-K3S"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jt-Gp-VsU">
                                 <rect key="frame" x="254" y="40" width="121" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -142,7 +134,6 @@
                         <constraints>
                             <constraint firstItem="2HU-Kd-Gx9" firstAttribute="top" secondItem="kJ3-sE-Q1b" secondAttribute="bottom" constant="20" id="7RD-tb-Q0S"/>
                             <constraint firstItem="Ta8-ec-qar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AF3-V7-fm1"/>
-                            <constraint firstItem="PDG-9C-owh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B7l-Fe-9Sa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2HU-Kd-Gx9" secondAttribute="trailing" constant="10" id="Dxx-o3-jNY"/>
                             <constraint firstItem="0Jt-Gp-VsU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FyK-bx-d04"/>
                             <constraint firstItem="X4a-Dt-8ih" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ivb-IT-kv3"/>
@@ -152,7 +143,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kJ3-sE-Q1b" secondAttribute="trailing" constant="10" id="byw-Cu-mwG"/>
                             <constraint firstItem="KMK-pd-yQz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cBS-89-1xh"/>
                             <constraint firstItem="X4a-Dt-8ih" firstAttribute="top" secondItem="2HU-Kd-Gx9" secondAttribute="bottom" constant="20" id="jOW-Js-PmS"/>
-                            <constraint firstItem="PDG-9C-owh" firstAttribute="top" secondItem="X4a-Dt-8ih" secondAttribute="bottom" constant="30" id="ktv-sT-37V"/>
                             <constraint firstItem="kJ3-sE-Q1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nxr-Fr-zYx"/>
                             <constraint firstItem="kJ3-sE-Q1b" firstAttribute="top" secondItem="Ta8-ec-qar" secondAttribute="bottom" constant="20" id="pYH-ft-yZH"/>
                             <constraint firstItem="2HU-Kd-Gx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8G-RT-Ayb"/>
@@ -175,7 +165,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

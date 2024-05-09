@@ -1,23 +1,33 @@
 PODS:
-  - Ads-Global (5.7.0.7):
-    - Ads-Global/BUAdSDK (= 5.7.0.7)
-  - Ads-Global/BUAdSDK (5.7.0.7):
+  - Ads-Global (5.8.0.8):
+    - Ads-Global/BUAdSDK (= 5.8.0.8)
+  - Ads-Global/BUAdSDK (5.8.0.8):
     - Ads-Global/BURelyAdSDK
     - Ads-Global/Dep_Accurate
-  - Ads-Global/BURelyAdSDK (5.7.0.7)
-  - Ads-Global/Dep_Accurate (5.7.0.7):
-    - BURelyFoundation_Global/Pangle (= 0.2.1.3)
-  - AppLovinSDK (12.1.0)
-  - BURelyFoundation_Global/AFNetworking (0.2.1.3)
-  - BURelyFoundation_Global/APM (0.2.1.3)
-  - BURelyFoundation_Global/Foundation (0.2.1.3):
+  - Ads-Global/BURelyAdSDK (5.8.0.8)
+  - Ads-Global/Dep_Accurate (5.8.0.8):
+    - BURelyFoundation_Global/Pangle (= 0.2.1.4)
+  - AdWhaleSDK (1.0.0):
+    - Google-Mobile-Ads-SDK (= 11.2.0)
+    - GoogleMobileAdsMediationAppLovin (= 12.3.0.0)
+    - GoogleMobileAdsMediationFyber (= 8.2.7.0)
+    - GoogleMobileAdsMediationInMobi (= 10.7.1.0)
+    - GoogleMobileAdsMediationIronSource (= 7.9.1.0.0)
+    - GoogleMobileAdsMediationMintegral (= 7.5.9.0)
+    - GoogleMobileAdsMediationPangle (= 5.8.0.8.0)
+    - GoogleMobileAdsMediationUnity (= 4.10.0.0)
+    - GoogleMobileAdsMediationVungle (= 7.3.0.0)
+  - AppLovinSDK (12.3.0)
+  - BURelyFoundation_Global/AFNetworking (0.2.1.4)
+  - BURelyFoundation_Global/APM (0.2.1.4)
+  - BURelyFoundation_Global/Foundation (0.2.1.4):
     - BURelyFoundation_Global/NETWork
-  - BURelyFoundation_Global/Gecko (0.2.1.3):
+  - BURelyFoundation_Global/Gecko (0.2.1.4):
     - BURelyFoundation_Global/Foundation
-  - BURelyFoundation_Global/Header (0.2.1.3)
-  - BURelyFoundation_Global/NETWork (0.2.1.3):
+  - BURelyFoundation_Global/Header (0.2.1.4)
+  - BURelyFoundation_Global/NETWork (0.2.1.4):
     - BURelyFoundation_Global/AFNetworking
-  - BURelyFoundation_Global/Pangle (0.2.1.3):
+  - BURelyFoundation_Global/Pangle (0.2.1.4):
     - BURelyFoundation_Global/AFNetworking
     - BURelyFoundation_Global/APM
     - BURelyFoundation_Global/Foundation
@@ -28,92 +38,45 @@ PODS:
     - BURelyFoundation_Global/YYModel
     - BURelyFoundation_Global/ZFPlayer
     - BURelyFoundation_Global/Zip
-  - BURelyFoundation_Global/SDWebImage (0.2.1.3):
+  - BURelyFoundation_Global/SDWebImage (0.2.1.4):
     - BURelyFoundation_Global/Foundation
-  - BURelyFoundation_Global/YYModel (0.2.1.3)
-  - BURelyFoundation_Global/ZFPlayer (0.2.1.3):
+  - BURelyFoundation_Global/YYModel (0.2.1.4)
+  - BURelyFoundation_Global/ZFPlayer (0.2.1.4):
     - BURelyFoundation_Global/Foundation
     - BURelyFoundation_Global/Zip
-  - BURelyFoundation_Global/Zip (0.2.1.3):
+  - BURelyFoundation_Global/Zip (0.2.1.4):
     - BURelyFoundation_Global/Foundation
-  - CaulySDK (3.1.22)
-  - Fyber_Marketplace_SDK (8.2.6)
-  - Google-Mobile-Ads-SDK (10.13.0):
-    - GoogleAppMeasurement (< 11.0, >= 7.0)
+  - Fyber_Marketplace_SDK (8.2.7)
+  - Google-Mobile-Ads-SDK (11.2.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleAppMeasurement (10.23.0):
-    - GoogleAppMeasurement/AdIdSupport (= 10.23.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
-    - nanopb (< 2.30911.0, >= 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (10.23.0):
-    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.23.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
-    - nanopb (< 2.30911.0, >= 2.30908.0)
-  - GoogleAppMeasurement/WithoutAdIdSupport (10.23.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
-    - nanopb (< 2.30911.0, >= 2.30908.0)
-  - GoogleMobileAdsMediationAppLovin (12.1.0.1):
-    - AppLovinSDK (= 12.1.0)
-    - Google-Mobile-Ads-SDK (~> 10.4)
-  - GoogleMobileAdsMediationFyber (8.2.6.0):
-    - Fyber_Marketplace_SDK (= 8.2.6)
-    - Google-Mobile-Ads-SDK (~> 10.4)
-  - GoogleMobileAdsMediationInMobi (10.6.0.0):
-    - Google-Mobile-Ads-SDK (~> 10.4)
-    - InMobiSDK (= 10.6.0)
-  - GoogleMobileAdsMediationIronSource (7.6.0.0):
-    - Google-Mobile-Ads-SDK (~> 10.4)
-    - IronSourceSDK (= 7.6.0)
-  - GoogleMobileAdsMediationMintegral (7.5.6.0):
-    - Google-Mobile-Ads-SDK (~> 10.4)
-    - MintegralAdSDK/All (= 7.5.6)
-  - GoogleMobileAdsMediationPangle (5.7.0.7.0):
-    - Ads-Global (= 5.7.0.7)
-    - Google-Mobile-Ads-SDK (~> 10.4)
-  - GoogleMobileAdsMediationUnity (4.9.2.0):
-    - Google-Mobile-Ads-SDK (~> 10.4)
-    - UnityAds (= 4.9.2)
-  - GoogleMobileAdsMediationVungle (7.2.1.1):
-    - Google-Mobile-Ads-SDK (~> 10.4)
-    - VungleAds (= 7.2.1)
-  - GoogleUserMessagingPlatform (2.3.0)
-  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-    - GoogleUtilities/Privacy
-  - GoogleUtilities/Environment (7.13.0):
-    - GoogleUtilities/Privacy
-    - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUtilities/Logger (7.13.0):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Privacy
-  - GoogleUtilities/MethodSwizzler (7.13.0):
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Privacy
-  - GoogleUtilities/Network (7.13.0):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Privacy
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (7.13.0)":
-    - GoogleUtilities/Privacy
-  - GoogleUtilities/Privacy (7.13.0)
-  - GoogleUtilities/Reachability (7.13.0):
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Privacy
-  - InMobiSDK (10.6.0)
-  - IronSourceSDK (7.6.0.0)
-  - MintegralAdSDK/All (7.5.6):
+  - GoogleMobileAdsMediationAppLovin (12.3.0.0):
+    - AppLovinSDK (= 12.3.0)
+    - Google-Mobile-Ads-SDK (~> 11.0)
+  - GoogleMobileAdsMediationFyber (8.2.7.0):
+    - Fyber_Marketplace_SDK (= 8.2.7)
+    - Google-Mobile-Ads-SDK (~> 11.0)
+  - GoogleMobileAdsMediationInMobi (10.7.1.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - InMobiSDK (= 10.7.1)
+  - GoogleMobileAdsMediationIronSource (7.9.1.0.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - IronSourceSDK (= 7.9.1.0)
+  - GoogleMobileAdsMediationMintegral (7.5.9.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - MintegralAdSDK/All (= 7.5.9)
+  - GoogleMobileAdsMediationPangle (5.8.0.8.0):
+    - Ads-Global (= 5.8.0.8)
+    - Google-Mobile-Ads-SDK (~> 11.0)
+  - GoogleMobileAdsMediationUnity (4.10.0.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - UnityAds (= 4.10.0)
+  - GoogleMobileAdsMediationVungle (7.3.0.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - VungleAds (= 7.3.0)
+  - GoogleUserMessagingPlatform (2.4.0)
+  - InMobiSDK (10.7.1)
+  - IronSourceSDK (7.9.1.0)
+  - MintegralAdSDK/All (7.5.9):
     - MintegralAdSDK/BannerAd
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/InterstitialVideoAd
@@ -122,53 +85,35 @@ PODS:
     - MintegralAdSDK/NewInterstitialAd
     - MintegralAdSDK/RewardVideoAd
     - MintegralAdSDK/SplashAd
-  - MintegralAdSDK/BannerAd (7.5.6):
+  - MintegralAdSDK/BannerAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNativeAd (7.5.6):
+  - MintegralAdSDK/BidNativeAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/InterstitialVideoAd (7.5.6):
+  - MintegralAdSDK/InterstitialVideoAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.5.6)
-  - MintegralAdSDK/NativeAdvancedAd (7.5.6):
+  - MintegralAdSDK/NativeAd (7.5.9)
+  - MintegralAdSDK/NativeAdvancedAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NewInterstitialAd (7.5.6):
+  - MintegralAdSDK/NewInterstitialAd (7.5.9):
     - MintegralAdSDK/InterstitialVideoAd
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.5.6):
+  - MintegralAdSDK/RewardVideoAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/SplashAd (7.5.6):
+  - MintegralAdSDK/SplashAd (7.5.9):
     - MintegralAdSDK/NativeAd
-  - nanopb (2.30910.0):
-    - nanopb/decode (= 2.30910.0)
-    - nanopb/encode (= 2.30910.0)
-  - nanopb/decode (2.30910.0)
-  - nanopb/encode (2.30910.0)
-  - PromisesObjC (2.4.0)
-  - UnityAds (4.9.2)
-  - VungleAds (7.2.1)
+  - UnityAds (4.10.0)
+  - VungleAds (7.3.0)
 
 DEPENDENCIES:
-  - CaulySDK (= 3.1.22)
-  - Google-Mobile-Ads-SDK (~> 10.13.0)
-  - GoogleMobileAdsMediationAppLovin (~> 12.1.0.0)
-  - GoogleMobileAdsMediationFyber (~> 8.2.6.0)
-  - GoogleMobileAdsMediationInMobi (~> 10.6.0.0)
-  - GoogleMobileAdsMediationIronSource (~> 7.6.0.0)
-  - GoogleMobileAdsMediationMintegral (~> 7.5.6.0)
-  - GoogleMobileAdsMediationPangle (~> 5.7.0.7.0)
-  - GoogleMobileAdsMediationUnity (~> 4.9.2.0)
-  - GoogleMobileAdsMediationVungle (~> 7.2.1.1)
+  - AdWhaleSDK (= 1.0.0)
 
 SPEC REPOS:
-  https://github.com/cauly/CaulySDK_iOS.git:
-    - CaulySDK
   https://github.com/CocoaPods/Specs.git:
     - Ads-Global
     - AppLovinSDK
     - BURelyFoundation_Global
     - Fyber_Marketplace_SDK
     - Google-Mobile-Ads-SDK
-    - GoogleAppMeasurement
     - GoogleMobileAdsMediationAppLovin
     - GoogleMobileAdsMediationFyber
     - GoogleMobileAdsMediationInMobi
@@ -178,41 +123,36 @@ SPEC REPOS:
     - GoogleMobileAdsMediationUnity
     - GoogleMobileAdsMediationVungle
     - GoogleUserMessagingPlatform
-    - GoogleUtilities
     - InMobiSDK
     - IronSourceSDK
     - MintegralAdSDK
-    - nanopb
-    - PromisesObjC
     - UnityAds
     - VungleAds
+  https://github.com/dev-adwhale/AdWhaleSDK_iOS.git:
+    - AdWhaleSDK
 
 SPEC CHECKSUMS:
-  Ads-Global: 9deee5f75017882d82a6123f537161f375bb9955
-  AppLovinSDK: 179d509c258e01a3a77eb8416f0ba843a12ed322
-  BURelyFoundation_Global: 932804aa7bac8c2c482b609371bbb6a079cc207b
-  CaulySDK: 2e9961f1851b4f9670c15287a63f04573877ca61
-  Fyber_Marketplace_SDK: f41cd55ff0d5b257beccc70e5708acd350468b66
-  Google-Mobile-Ads-SDK: 517003a1a2430005da3e85df4d061cd7de107a5a
-  GoogleAppMeasurement: 453eb0de99fcf2bdec9403e9ac5d7871fdba3e3f
-  GoogleMobileAdsMediationAppLovin: 1b88297e51b4e84c0d9d8c86aa7fa76ce5153b61
-  GoogleMobileAdsMediationFyber: 0f69a304ce1b6968adf7905bd259e1e27b01c221
-  GoogleMobileAdsMediationInMobi: b6af8b94e072fbee165dc4b4b06eb06873e58cb3
-  GoogleMobileAdsMediationIronSource: c0354692f8d49bec421648baa89e46c8302c96f1
-  GoogleMobileAdsMediationMintegral: 8a800482fa559d1d4b34192efdd006c868127de5
-  GoogleMobileAdsMediationPangle: 5d10c78c03182254ff32a6041f5e921af02deeda
-  GoogleMobileAdsMediationUnity: b27046b3d4e7a703121c00975ed906afc5c1cdbb
-  GoogleMobileAdsMediationVungle: 70854b6dc87e93880bfddb4dbb6b4f9763449942
-  GoogleUserMessagingPlatform: b1ad7bb1ee3ce64749d4fec24f667b36e45c396c
-  GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
-  InMobiSDK: 7c62b28415c663b881fa7009d04e0a5484f67902
-  IronSourceSDK: 276835c7199033724d947c511a372383ac2846de
-  MintegralAdSDK: 6a3058c0b33a2458744ffe0de1a9737e1507b99d
-  nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
-  UnityAds: 358547edbd4c923cd03462289b8813d0ef91999e
-  VungleAds: d76f43822faca3763e48749b5dac799bfcd48813
+  Ads-Global: b2f2943acdeedeae08aa9dce19706e1edbbd5442
+  AdWhaleSDK: dbcc67a970ce65789719a15c224657949c05a070
+  AppLovinSDK: 04201ea11acec7c5e11f6c97236379df23c6aba1
+  BURelyFoundation_Global: 17ed9cd58d138feefd8c0711dd3294766adcb28e
+  Fyber_Marketplace_SDK: 90d17e7cb04f505b00c2410679f115aefc9fd4e5
+  Google-Mobile-Ads-SDK: 5a6d005a6cb5b5e8f4c7b69ca05cdea79c181139
+  GoogleMobileAdsMediationAppLovin: a8a0a0388fd6c39c03e1341d4c6eda01b689a956
+  GoogleMobileAdsMediationFyber: d9afe2c135263fe4aacca51830624d619d54fcb7
+  GoogleMobileAdsMediationInMobi: 316ea98b089e743de385888ae6ae4d1807c33321
+  GoogleMobileAdsMediationIronSource: 6135bc3fbf5fc95d0c6cb4f32e214a7d77c4b60e
+  GoogleMobileAdsMediationMintegral: db5500d318fc404b9b1a8a63a87f06490b524f1d
+  GoogleMobileAdsMediationPangle: 436633392ec6f35b288e4a6469a877d2d83bbbd1
+  GoogleMobileAdsMediationUnity: 144474b1e19b3b4a8b60cf3da8f0d9ca25d83597
+  GoogleMobileAdsMediationVungle: 75f3f80a9f2c3bae806fc46d70ad3cff23f37c25
+  GoogleUserMessagingPlatform: f131fa7978d2ba88d7426702b057c2cc318e6595
+  InMobiSDK: 8b93c1d4d8ac0d91cf9585fc8b65750b8f09e835
+  IronSourceSDK: 4c3c24265e83ca1e4e8fdc5a499d9a5772b5040c
+  MintegralAdSDK: 310ae24bd4f0a6c1099161ba4675ba0f771e9b14
+  UnityAds: 5601f6397b0e02ed3ed6ee92827f5177a523aab6
+  VungleAds: c7bf642b4a4581177b5c76042423a21d8c32ef1e
 
-PODFILE CHECKSUM: 93d91bc3572991f596dc9ab545e8a6dd8efef3c9
+PODFILE CHECKSUM: 7f38bee63987db82184bce7dba3b59860e1baad5
 
 COCOAPODS: 1.14.2

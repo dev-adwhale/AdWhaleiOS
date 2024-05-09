@@ -1,24 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/cauly/CaulySDK_iOS.git'
+source 'https://github.com/dev-adwhale/AdWhaleSDK_iOS.git'
 
 target 'AdWhaleSample-Swift' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for AdWhaleSample-Swift
-  pod 'Google-Mobile-Ads-SDK', '~>10.13.0'
-
-  pod 'GoogleMobileAdsMediationInMobi', '~>10.6.0.0'
-  pod 'GoogleMobileAdsMediationAppLovin', '~>12.1.0.0'
-  pod 'GoogleMobileAdsMediationVungle', '~>7.2.1.1'
-  pod 'GoogleMobileAdsMediationFyber', '~>8.2.6.0'
-  pod 'GoogleMobileAdsMediationMintegral', '~>7.5.6.0'
-  pod 'GoogleMobileAdsMediationPangle', '~>5.7.0.7.0'
-  pod 'GoogleMobileAdsMediationUnity', '~>4.9.2.0'
-  pod 'GoogleMobileAdsMediationIronSource', '~>7.6.0.0'
-  pod 'CaulySDK', '3.1.22'
+  pod 'AdWhaleSDK', '1.0.0'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

@@ -17,10 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // SDK Init & GDPR 설정
-        // useGdpr: true -> GDPR 사용 설정, false -> GDPR 미사용 설정
-        // testDevices: ["TEST-DEVICE-ID"] -> GDPR 테스트 모드 설정, nil -> GDPR 테스트 모드 미사용 설정
-        AdWhaleAds.sharedInstance.initialize(rootViewController: self, useGdpr: false, testDevices: nil, completionHandler: {
+        // SDK GDPR 설정
+        AdWhaleAds.sharedInstance.gdpr(self, testDevices: nil, completionHandler: {
             // SDK 초기화 완료 후 동작 코드
             
             // BannerView Setting
@@ -74,15 +72,27 @@ class ViewController: UIViewController {
     
     
     // MARK: Native Ad Request
-    // 개발 진행중 입니다.
+    // ca-app-pub-3940256099942544/3986624511
     @IBAction func nativeAdRequest(_ sender: UIButton) {
+        AdWhaleNativeAdLoader.sharedInstance.initialize(adUnitId: "ca-app-pub-3940256099942544/3986624511", rootViewController: self)
+        AdWhaleNativeAdLoader.sharedInstance.delegate = self
+        
+        AdWhaleNativeAdLoader.sharedInstance.loadAd()
     }
     
-    // MARK: AppOpen Ad Request
-    @IBAction func appOpenAdRequest(_ sender: UIButton) {
-        AdWhaleAppOpenAd.shared.loadAd("ca-app-pub-3940256099942544/5575463023")
-        AdWhaleAppOpenAd.shared.appOpenAdDelegate = self
-        AdWhaleAppOpenAd.shared.appOpenAdViewDelegate = self
+    func setNativeAdView() {
+        let nibView = Bundle.main.loadNibNamed("NativeAdView", owner: nil)?.first
+        guard let nativeAdView = nibView as? NativeAdView else {
+            print("NativeAdView is nil")
+            return
+        }
+        
+        nativeAdView.frame = CGRect(x: 10,
+                                    y: (Int(UIScreen.main.bounds.height) - 460),
+                                    width: (Int(UIScreen.main.bounds.width) - 20),
+                                    height: 380)
+        self.view.addSubview(nativeAdView)
+        AdWhaleNativeAdLoader.sharedInstance.bind(nativeAdView)
     }
     
     
@@ -121,25 +131,25 @@ extension ViewController: AdWhaleBannerDelegate {
 
 // MARK: InterstitialAd Delegate
 extension ViewController: AdWhaleInterstitialDelegate {
-    func adDidReceiveAd(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
-        print("adWhale Sample adDidReceiveAd")
+    func adDidReceiveInterstitialAd(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
+        print("adWhale Sample adDidReceiveInterstitialAd")
         interstitialAd = ad
     }
     
-    func adDidFailToReceiveAdWithError(_ error: Error) {
-        print("adWhale Sample adDidFailToReceiveAdWithError")
+    func adDidFailToReceiveInterstitialAdWithError(_ error: Error) {
+        print("adWhale Sample adDidFailToReceiveInterstitialAdWithError")
     }
     
-    func ad(_ ad: AdWhaleSDK.AdWhaleInterstitialAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("adWhale Sample didFailToPresentFullScreenContentWithError")
+    func ad(_ ad: AdWhaleSDK.AdWhaleInterstitialAd, didFailToPresentInterstitialAdWithError error: Error) {
+        print("adWhale Sample didFailToPresentInterstitialAdWithError")
     }
     
-    func adWillPresentFullScreenContent(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
-        print("adWhale Ad will present full screen content.")
+    func adWillPresentInterstitialAd(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
+        print("adWhale Ad will present Interstitial ad.")
     }
     
-    func adDidDismissFullScreenContent(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
-        print("adWhale Ad did dismiss full screen content.")
+    func adDidDismissInterstitialAd(_ ad: AdWhaleSDK.AdWhaleInterstitialAd) {
+        print("adWhale Ad did dismiss Interstitial ad.")
     }
 }
 
@@ -171,29 +181,44 @@ extension ViewController: AdWhaleRewardDelegate {
     }
 }
 
-
-
-// MARK: AppOpenAd Delegate
-extension ViewController: AdWhaleAppOpenAdDelegate, AdWhaleAppOpenAdViewDelegate {
-    func adDidReceiveAd() {
-        print("adDidReceiveAd")
+// MARK: NativeAd Delegate
+extension ViewController: AdWhaleNativeAdLoaderDelegate, AdWhaleNativeAdDelegate {
+    func nativeAdLoaderDidReceiveAd(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("Received native ad: \(nativeAd)")
         
-        AdWhaleAppOpenAd.shared.showAdIfAvailable(self)
+        nativeAd.delegate = self
+        
+        setNativeAdView()
     }
     
-    func adWillPresentFullScreenContent() {
-        print("adWillPresentFullScreenContent")
+    func nativeAdLoaderDidFailToReceiveAd(_ nativeAd: AdWhaleSDK.AdWhaleNativeAdLoader, error: Error) {
+        print("adLoader didFailToAdWithError \(error.localizedDescription)")
     }
     
-    func adDidDismissFullScreenContent() {
-        print("adDidDismissFullScreenContent")
+    func nativeAdDidClickAd(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdDidClickAd")
     }
     
-    func adDidFailToPresentFullScreenContentWithError(_ error: Error) {
-        print("adDidFailToPresentFullScreenContentWithError: \(error.localizedDescription)")
+    func nativeAdDidImpression(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdDidImpression")
     }
     
-    func appOpenAdDidComplete(_ ad: AdWhaleAppOpenAd) {
-        print("appOpenAdDidComplete")
+    func nativeAdWillPresentScreen(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdWillPresentScreen")
+    }
+    
+    func nativeAdWillDismissScreen(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdWillDismissScreen")
+    }
+    
+    func nativeAdDidDismissScreen(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdDidDismissScreen")
+    }
+    
+    func nativeAdWillLeaveApplication(_ nativeAd: AdWhaleSDK.AdWhaleNativeAd) {
+        print("nativeAdWillLeaveApplication")
     }
 }
+
+
+

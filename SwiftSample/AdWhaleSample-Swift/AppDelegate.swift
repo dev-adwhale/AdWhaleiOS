@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import AdWhaleSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // SDK Init
+        AdWhaleAds.sharedInstance.initialize {
+            // SDK 초기화 완료 후 동작 코드
+        }
+        
         return true
     }
     
