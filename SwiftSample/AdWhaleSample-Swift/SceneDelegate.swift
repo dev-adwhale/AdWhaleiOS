@@ -84,31 +84,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        return viewController
     }
 }
-
-// MARK: AppOpenAd Delegate
-extension SceneDelegate: AdWhaleAppOpenAdDelegate {
-    func adDidReceiveAppOpenAd(_ ad: AdWhaleAppOpenAd) {
-        // 광고 로드가 완료되면 메소드가 실행됩니다.
-        print("adDidReceiveAppOpenAd")
-    }
-    
-    func adDidFailToReceiveAppOpenAd(error: Error) {
-        // 광고 로드가 실패하고 발생한 오류를 포함합니다.
-        print("adDidFailToReceiveAppOpenAd error: \(error.localizedDescription)")
-    }
-    
-    func adWillPresentAppOpenAd() {
-        // 광고가 전체 화면 콘텐츠를 표시할 때 호출됩니다.
-        print("adWillPresentAppOpenAd")
-    }
-    
-    func adDidDismissAppOpenAd() {
-        // 전체 화면 콘텐츠를 닫을 때 호출됩니다.
-        print("adDidDismissAppOpenAd")
-    }
-    
-    func adDidFailToPresentAppOpenAd(error: Error) {
-        // 전체 화면 콘텐츠 표시가 실패하고 발생한 오류를 포합합니다.
-        print("adDidFailToPresentAppOpenAd error: \(error)")
-    }
-}
