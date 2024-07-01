@@ -75,7 +75,7 @@ PODS:
   - GoogleMobileAdsMediationVungle (7.3.0.0):
     - Google-Mobile-Ads-SDK (~> 11.0)
     - VungleAds (= 7.3.0)
-  - GoogleUserMessagingPlatform (2.4.0)
+  - GoogleUserMessagingPlatform (2.5.0)
   - InMobiSDK (10.7.1)
   - IronSourceSDK (7.9.1.0)
   - MintegralAdSDK/All (7.5.9):
@@ -148,13 +148,13 @@ SPEC CHECKSUMS:
   GoogleMobileAdsMediationPangle: 436633392ec6f35b288e4a6469a877d2d83bbbd1
   GoogleMobileAdsMediationUnity: 144474b1e19b3b4a8b60cf3da8f0d9ca25d83597
   GoogleMobileAdsMediationVungle: 75f3f80a9f2c3bae806fc46d70ad3cff23f37c25
-  GoogleUserMessagingPlatform: f131fa7978d2ba88d7426702b057c2cc318e6595
+  GoogleUserMessagingPlatform: 6b4f48a370e77ce121d034c908cc6ee4fdafaf13
   InMobiSDK: 8b93c1d4d8ac0d91cf9585fc8b65750b8f09e835
   IronSourceSDK: 4c3c24265e83ca1e4e8fdc5a499d9a5772b5040c
   MintegralAdSDK: 310ae24bd4f0a6c1099161ba4675ba0f771e9b14
   UnityAds: 5601f6397b0e02ed3ed6ee92827f5177a523aab6
   VungleAds: c7bf642b4a4581177b5c76042423a21d8c32ef1e
 
-PODFILE CHECKSUM: a6bad7b960b1e3c733e0adc1ae797bfac54509ca
+PODFILE CHECKSUM: 83733c131de4ed302558cb90969e76430b8871d2
 
 COCOAPODS: 1.14.2

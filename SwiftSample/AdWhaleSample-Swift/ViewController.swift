@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // SDK GDPR 설정
-        AdWhaleAds.sharedInstance.gdpr(self, testDevices: nil, completionHandler: {
-            // SDK 초기화 완료 후 동작 코드
+        AdWhaleAds.sharedInstance.gdpr(self, testDevices: nil, completionHandler: { result in
+            // GDPR 설정 완료 후 동작 코드
             
             // BannerView Setting
             self.bannerView.setAdSize(.banner)
@@ -27,6 +27,17 @@ class ViewController: UIViewController {
             self.bannerView.setRootViewController(self)
             self.bannerView.setDelegate(self)
         })
+        
+        
+        /** 프로그램 코드 방식으로 배너 구현하는 경우 적용  **/
+//        let frame = CGRect(x: 0,
+//                           y: 500,
+//                           width: UIScreen.main.bounds.width,
+//                           height: 50)
+//        
+//        bannerView = AdWhaleBannerAd(frame: frame)
+//        view.addSubview(bannerView)
+        /** 프로그램 코드 방식으로 배너 구현하는 경우 적용 **/
     }
     
     // Ad inspector 코드 방식 호출
@@ -72,7 +83,6 @@ class ViewController: UIViewController {
     
     
     // MARK: Native Ad Request
-    // ca-app-pub-3940256099942544/3986624511
     @IBAction func nativeAdRequest(_ sender: UIButton) {
         AdWhaleNativeAdLoader.sharedInstance.initialize(adUnitId: "ca-app-pub-3940256099942544/3986624511", rootViewController: self)
         AdWhaleNativeAdLoader.sharedInstance.delegate = self
@@ -88,9 +98,9 @@ class ViewController: UIViewController {
         }
         
         nativeAdView.frame = CGRect(x: 10,
-                                    y: (Int(UIScreen.main.bounds.height) - 460),
+                                    y: (Int(UIScreen.main.bounds.height) - 430),
                                     width: (Int(UIScreen.main.bounds.width) - 20),
-                                    height: 380)
+                                    height: 350)
         self.view.addSubview(nativeAdView)
         AdWhaleNativeAdLoader.sharedInstance.bind(nativeAdView)
     }
