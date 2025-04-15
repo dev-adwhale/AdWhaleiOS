@@ -7,9 +7,9 @@ PODS:
   - Ads-Global/BURelyAdSDK (5.8.0.8)
   - Ads-Global/Dep_Accurate (5.8.0.8):
     - BURelyFoundation_Global/Pangle (= 0.2.1.4)
-  - AdWhaleSDK (1.0.0):
-    - AdWhaleSDK/Base (= 1.0.0)
-  - AdWhaleSDK/Base (1.0.0):
+  - AdWhaleSDK (1.0.1):
+    - AdWhaleSDK/Base (= 1.0.1)
+  - AdWhaleSDK/Base (1.0.1):
     - Google-Mobile-Ads-SDK (= 11.2.0)
     - GoogleMobileAdsMediationAppLovin (= 12.3.0.0)
     - GoogleMobileAdsMediationFyber (= 8.2.7.0)
@@ -75,7 +75,7 @@ PODS:
   - GoogleMobileAdsMediationVungle (7.3.0.0):
     - Google-Mobile-Ads-SDK (~> 11.0)
     - VungleAds (= 7.3.0)
-  - GoogleUserMessagingPlatform (2.5.0)
+  - GoogleUserMessagingPlatform (3.0.0)
   - InMobiSDK (10.7.1)
   - IronSourceSDK (7.9.1.0)
   - MintegralAdSDK/All (7.5.9):
@@ -107,7 +107,7 @@ PODS:
   - VungleAds (7.3.0)
 
 DEPENDENCIES:
-  - AdWhaleSDK (= 1.0.0)
+  - AdWhaleSDK (= 1.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -135,7 +135,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Ads-Global: b2f2943acdeedeae08aa9dce19706e1edbbd5442
-  AdWhaleSDK: c5f9c99cc6b90b206bded3b60d908e4caf982090
+  AdWhaleSDK: bde5b31ca329a24814eb189ca3fab695fba589a4
   AppLovinSDK: 04201ea11acec7c5e11f6c97236379df23c6aba1
   BURelyFoundation_Global: 17ed9cd58d138feefd8c0711dd3294766adcb28e
   Fyber_Marketplace_SDK: 90d17e7cb04f505b00c2410679f115aefc9fd4e5
@@ -148,13 +148,13 @@ SPEC CHECKSUMS:
   GoogleMobileAdsMediationPangle: 436633392ec6f35b288e4a6469a877d2d83bbbd1
   GoogleMobileAdsMediationUnity: 144474b1e19b3b4a8b60cf3da8f0d9ca25d83597
   GoogleMobileAdsMediationVungle: 75f3f80a9f2c3bae806fc46d70ad3cff23f37c25
-  GoogleUserMessagingPlatform: 6b4f48a370e77ce121d034c908cc6ee4fdafaf13
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
   InMobiSDK: 8b93c1d4d8ac0d91cf9585fc8b65750b8f09e835
   IronSourceSDK: 4c3c24265e83ca1e4e8fdc5a499d9a5772b5040c
   MintegralAdSDK: 310ae24bd4f0a6c1099161ba4675ba0f771e9b14
   UnityAds: 5601f6397b0e02ed3ed6ee92827f5177a523aab6
   VungleAds: c7bf642b4a4581177b5c76042423a21d8c32ef1e
 
-PODFILE CHECKSUM: 83733c131de4ed302558cb90969e76430b8871d2
+PODFILE CHECKSUM: 8f010cc232c7ccb5ae7803e1a6f4492634ed26fe
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.16.2
