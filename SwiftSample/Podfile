@@ -8,7 +8,7 @@ target 'AdWhaleSample-Swift' do
   use_frameworks!
 
   # Pods for AdWhaleSample-Swift
-  pod 'AdWhaleSDK', '1.0.1'
+  pod 'AdWhaleSDK', '1.0.2'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
