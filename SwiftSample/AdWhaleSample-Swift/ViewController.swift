@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var bannerView: AdWhaleBannerAd!
     var interstitialAd: AdWhaleInterstitialAd?
     var rewardAd: AdWhaleRewardAd?
+    var nativeAdLoader: AdWhaleNativeAdLoader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +49,18 @@ class ViewController: UIViewController {
     // MARK: Banner Ad Request
     @IBAction func bannerAdRequest(_ sender: UIButton) {
         print("banner Ad Request")
+        // Banner Ad Request
         bannerView.load()
     }
     
     
     // MARK: Interstitial Ad Requset & Show
     @IBAction func interstitialAdRequest(_ sender: UIButton) {
+        // Interstitial Ad Setting
         let interstitial = AdWhaleInterstitialAd()
         interstitial.interstitialDelegate = self
+        
+        // Interstitial Ad Request
         interstitial.load("ca-app-pub-3940256099942544/4411468910")
     }
     
@@ -69,8 +74,11 @@ class ViewController: UIViewController {
     
     // MARK: Reward Ad Request & Show
     @IBAction func rewardAdRequest(_ sender: UIButton) {
+        // Reward Ad Setting
         let reward = AdWhaleRewardAd()
         reward.rewardDelegate = self
+        
+        // Reward Ad Request
         reward.load("ca-app-pub-3940256099942544/1712485313")
     }
     
@@ -84,10 +92,13 @@ class ViewController: UIViewController {
     
     // MARK: Native Ad Request
     @IBAction func nativeAdRequest(_ sender: UIButton) {
-        AdWhaleNativeAdLoader.sharedInstance.initialize(adUnitId: "ca-app-pub-3940256099942544/3986624511", rootViewController: self)
-        AdWhaleNativeAdLoader.sharedInstance.delegate = self
+        // NativeAdLoader Setting
+        nativeAdLoader = AdWhaleNativeAdLoader()
+        nativeAdLoader?.initialize(adUnitId: "ca-app-pub-3940256099942544/3986624511", rootViewController: self)
+        nativeAdLoader?.delegate = self
         
-        AdWhaleNativeAdLoader.sharedInstance.loadAd()
+        // Native Ad Request
+        nativeAdLoader?.loadAd()
     }
     
     func setNativeAdView() {
@@ -102,7 +113,7 @@ class ViewController: UIViewController {
                                     width: (Int(UIScreen.main.bounds.width) - 20),
                                     height: 350)
         self.view.addSubview(nativeAdView)
-        AdWhaleNativeAdLoader.sharedInstance.bind(nativeAdView)
+        nativeAdLoader?.bind(nativeAdView)
     }
     
     

@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<AdWhaleBannerDelegate, AdWhaleInterstitialDelegate, AdWhaleRewardDelegate, AdWhaleNativeAdLoaderDelegate, AdWhaleNativeAdDelegate> {
     AdWhaleInterstitialAd *interstitialAd;
     AdWhaleRewardAd *rewardAd;
+    AdWhaleNativeAdLoader *nativeAdLoader;
 }
 
 @property (strong, nonatomic) IBOutlet AdWhaleBannerAd *bannerView;

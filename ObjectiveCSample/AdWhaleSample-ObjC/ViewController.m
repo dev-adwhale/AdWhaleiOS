@@ -46,14 +46,18 @@
 #pragma mark - Banner Ad Request
 - (IBAction)bannerAdRequest:(id)sender {
     NSLog(@"banner Ad Request");
+    // Banner Ad Request
     [self.bannerView load];
 }
 
 
 #pragma mark - Interstitial Ad Request & Show
 - (IBAction)interstitialAdRequest:(id)sender {
+    // Interstitial Ad Setting
     AdWhaleInterstitialAd *interstitial = [[AdWhaleInterstitialAd alloc] init];
     interstitial.interstitialDelegate = self;
+    
+    // Interstitial Ad Request
     [interstitial load:@"ca-app-pub-3940256099942544/4411468910"];
 }
 
@@ -66,8 +70,11 @@
 
 #pragma mark - Reward Ad Request & Show
 - (IBAction)rewardAdRequest:(id)sender {
+    // Reward Ad Setting
     AdWhaleRewardAd *reward = [[AdWhaleRewardAd alloc] init];
     reward.rewardDelegate = self;
+    
+    // Reward Ad Request
     [reward load:@"ca-app-pub-3940256099942544/1712485313"];
 }
 
@@ -80,10 +87,13 @@
 
 #pragma mark - Native Ad Request
 - (IBAction)nativeAdRequest:(id)sender {
-    AdWhaleNativeAdLoader *adLoader = [AdWhaleNativeAdLoader sharedInstance];
-    [adLoader initializeWithAdUnitId:@"ca-app-pub-3940256099942544/3986624511" rootViewController:self];
-    adLoader.delegate = self;
-    [adLoader loadAd];
+    // NativeAdLoader Setting
+    nativeAdLoader = [[AdWhaleNativeAdLoader alloc] init];
+    [nativeAdLoader initializeWithAdUnitId:@"ca-app-pub-3940256099942544/3986624511" rootViewController:self];
+    nativeAdLoader.delegate = self;
+    
+    // Native Ad Request
+    [nativeAdLoader loadAd];
 }
 
 - (void)setNativeAdView {
@@ -93,7 +103,7 @@
                                     [UIScreen mainScreen].bounds.size.height - 430,
                                     [UIScreen mainScreen].bounds.size.width - 20,
                                     350);
-    AdWhaleNativeAdView *adView = [[AdWhaleNativeAdLoader sharedInstance] bindView:nativeAdView];
+    AdWhaleNativeAdView *adView = [nativeAdLoader bindView:nativeAdView];
     [self.view addSubview:adView];
 }
 
